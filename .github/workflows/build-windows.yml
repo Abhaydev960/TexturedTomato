@@ -24,12 +24,12 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          pip install -r requirements.txt
+          pip install -r TexturedTomato/requirements.txt
           pip install pyinstaller
 
       - name: Build Application
         run: |
-          pyinstaller --noconfirm --clean --windowed --onedir --name TexturedTomato main.py
+          pyinstaller --noconfirm --clean --windowed --onedir --name TexturedTomato TexturedTomato/main.py
 
       - name: Upload Windows Application
         uses: actions/upload-artifact@v4
